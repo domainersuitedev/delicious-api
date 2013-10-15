@@ -1,4 +1,4 @@
-delicious-api
+Delicious API
 =============
 
 Delicious API Documentation
