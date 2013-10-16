@@ -10,7 +10,7 @@ RSS is a format used by many news sites and blogs to publish content on the web.
 
 Accordingly, Delicious offers links to companion RSS feeds on most Profile pages to help you keep track of links from other users. Look for the \u201crss\u201d link just under a user\u2019s profile picture. 
 
-In addition, many web browsers -- such as [Firefox](http://www.mozilla.com /en-US/firefox/livebookmarks.html), [Safari](http://www.apple.com/safari/features.html), and [Internet Explorer](http://windows.microsoft.com/en-NZ/windows-vista/Using-feeds-RSS) -- automatically detect RSS feeds associated with pages and offer convenient ways to subscribe.
+In addition, many web browsers -- such as [Firefox](http://www.mozilla.org/en-US/firefox/livebookmarks.html) and [Internet Explorer](http://windows.microsoft.com/en-NZ/windows-vista/Using-feeds-RSS) -- automatically detect RSS feeds associated with pages and offer convenient ways to subscribe.
 
 ## What is JSON?
 
