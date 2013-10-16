@@ -1,4 +1,4 @@
-# APIs -- Application Programming Interface
+# APIs — Application Programming Interface
 
 This document and the APIs herein are subject to change at any time. We will version the API, but may deprecate early versions aggressively.
 
@@ -18,7 +18,7 @@ All `/v1` APIs require HTTPS requests and HTTP-Auth.
 
 ## Update
 
-## `/v1/posts/update` -- Check to see when a user last posted an item
+## `/v1/posts/update` — Check to see when a user last posted an item
 
 Returns the last update time for the user, as well as the number of new items in the user’s inbox since it was last visited.
 
@@ -32,7 +32,7 @@ Use this before calling posts/all to see if the data has changed since the last 
 
 ## Posts
 
-## `/v1/posts/add?` -- add a new bookmark
+## `/v1/posts/add?` — add a new bookmark
 
 Add a post to Delicious.
 
@@ -60,7 +60,7 @@ If the post failed:
 <result code="something went wrong" />
 ```
 
-## `/v1/posts/delete?` -- delete an existing bookmark
+## `/v1/posts/delete?` — delete an existing bookmark
 
 Delete a post from Delicious.
 
@@ -74,7 +74,7 @@ Delete a post from Delicious.
 <result code="done" />
 ```
 
-## `/v1/posts/get?` -- get bookmark for a single date, or fetch specific items
+## `/v1/posts/get?` — get bookmark for a single date, or fetch specific items
 
 Returns one or more posts on a single day matching the Arguments. If no date
 or url is given, most recent date will be used.
@@ -85,7 +85,7 @@ or url is given, most recent date will be used.
 - `&dt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter by this date, defaults to the most recent date on which bookmarks were saved.
 - `&url={URL}` (optional) — Fetch a bookmark for this URL, regardless of date.  Note: Be sure to URL-encode the argument value.
 - `&hashes={MD5}+{MD5}+...+{MD5}` (optional) — Fetch multiple bookmarks by one or more URL MD5s regardless of date, separated by URL-encoded spaces (ie. `‘+’`).
-- `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute -- its value will change when any significant field of the bookmark changes.
+- `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute — its value will change when any significant field of the bookmark changes.
 
 ### Example
 
@@ -120,7 +120,7 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/get?url=http%3A%2F%2Fwww.y
 </posts>
 ```
 
-## `/v1/posts/recent?` -- fetch recent bookmarks
+## `/v1/posts/recent?` — fetch recent bookmarks
 
 Returns a list of the most recent posts, filtered by argument. Maximum 100.
 
@@ -148,7 +148,7 @@ tag="news media" time="2005-11-29T20:30:05Z" />
 </posts>
 ```
 
-## `/v1/posts/dates?` -- list dates on which bookmarks were posted
+## `/v1/posts/dates?` — list dates on which bookmarks were posted
 
 Returns a list of dates with the number of posts at each date.
 
@@ -171,7 +171,7 @@ Returns a list of dates with the number of posts at each date.
 </dates>
 ```
 
-## `/v1/posts/all?` -- fetch all bookmarks by date or index range
+## `/v1/posts/all?` — fetch all bookmarks by date or index range
 
 Returns all posts. Please use sparingly. Call the update function to see if
 you need to fetch this at all.
@@ -204,7 +204,7 @@ tag="news media" time="2005-11-29T20:30:05Z" />
 </posts>
 ```
 
-## `/v1/posts/all?hashes` -- fetch a change detection manifest of all items
+## `/v1/posts/all?hashes` — fetch a change detection manifest of all items
 
 Returns a change manifest of all posts. Call the update function to see if you need to fetch this at all.
 
@@ -230,7 +230,7 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/all?hashes
 </posts>
 ```
 
-## `/v1/posts/suggest` -- fetch popular, recommended and network tags for a specific url
+## `/v1/posts/suggest` — fetch popular, recommended and network tags for a specific url
 
 Returns a list of popular tags, recommended tags and network tags for a user.
 
@@ -279,7 +279,7 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/suggest?url=http://yahoo.c
 
 ## Tags
 
-## `/v1/tags/get` -- fetch all tags
+## `/v1/tags/get` — fetch all tags
 
 Returns a list of tags and number of times used by a user.
 
@@ -296,7 +296,7 @@ Returns a list of tags and number of times used by a user.
 </tags>
 ```
 
-## `/v1/tags/delete?` -- delete a tag from all posts
+## `/v1/tags/delete?` — delete a tag from all posts
 
 Delete an existing tag.
 
@@ -310,7 +310,7 @@ Delete an existing tag.
 <result>done</result>
 ```
 
-## `/v1/tags/rename?` -- rename a tag on all posts
+## `/v1/tags/rename?` — rename a tag on all posts
 
 Rename an existing tag with a new tag name.
 
@@ -327,7 +327,7 @@ Rename an existing tag with a new tag name.
 
 ## Tag Bundles
 
-## `/v1/tags/bundles/all?` -- fetch tag bundles
+## `/v1/tags/bundles/all?` — fetch tag bundles
 
 Retrieve all of a user’s bundles.
 
@@ -343,7 +343,7 @@ Retrieve all of a user’s bundles.
 </bundles>
 ```
 
-## `/v1/tags/bundles/set?` -- assign a set of tags to a bundle
+## `/v1/tags/bundles/set?` — assign a set of tags to a bundle
 
 Assign a set of tags to a single bundle, wipes away previous settings for
 bundle.

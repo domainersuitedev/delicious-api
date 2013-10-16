@@ -2,15 +2,15 @@
 
 ## What are Delicious Feeds?
 
-For most pages within Delicious, there are associated read-only data feeds for bookmarks and other information displayed in a browser. These feeds come in several formats -- including [RSS](http://en.wikipedia.org/wiki/RSS_(protocol)) and [JSON](http://json.org) -- and offer windows onto what’s going on at Delicious that you can use in news readers, blogs, or your own third-party applications.
+For most pages within Delicious, there are associated read-only data feeds for bookmarks and other information displayed in a browser. These feeds come in several formats — including [RSS](http://en.wikipedia.org/wiki/RSS_(protocol)) and [JSON](http://json.org) — and offer windows onto what’s going on at Delicious that you can use in news readers, blogs, or your own third-party applications.
 
 ## What is RSS?
 
-RSS is a format used by many news sites and blogs to publish content on the web. Using RSS to publish content enables [news readers](http://www.opencommunity.co.uk/vienna2.php) and [personalized start pages](http://my.yahoo.com) to pull new stuff all into one place. Applications that understand RSS can do the footwork and provide a one-stop shop to help readers keep on top of things without needing to surf all over the web in person. 
+RSS is a format used by many news sites and blogs to publish content on the web. Using RSS to publish content enables [news readers](http://www.opencommunity.co.uk/vienna2.php) and [personalized start pages](http://my.yahoo.com) to pull new stuff all into one place. Applications that understand RSS can do the footwork and provide a one-stop shop to help readers keep on top of things without needing to surf all over the web in person.
 
-Accordingly, Delicious offers links to companion RSS feeds on most Profile pages to help you keep track of links from other users. Look for the “rss” link just under a user’s profile picture. 
+Accordingly, Delicious offers links to companion RSS feeds on most Profile pages to help you keep track of links from other users. Look for the “rss” link just under a user’s profile picture.
 
-In addition, many web browsers -- such as [Firefox](http://www.mozilla.org/en-US/firefox/livebookmarks.html) and [Internet Explorer](http://windows.microsoft.com/en-NZ/windows-vista/Using-feeds-RSS) -- automatically detect RSS feeds associated with pages and offer convenient ways to subscribe.
+In addition, many web browsers — such as [Firefox](http://www.mozilla.org/en-US/firefox/livebookmarks.html) and [Internet Explorer](http://windows.microsoft.com/en-NZ/windows-vista/Using-feeds-RSS) — automatically detect RSS feeds associated with pages and offer convenient ways to subscribe.
 
 ## What is JSON?
 
