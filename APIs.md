@@ -1,4 +1,3 @@
-
 # APIs -- Application Programming Interface
 
 This document and the APIs herein are subject to change at any time. We will version the API, but may deprecate early versions aggressively.
@@ -13,7 +12,7 @@ All `/v1` APIs require HTTPS requests and HTTP-Auth.
 - Please wait **at least one second** between queries, or you are likely to get automatically throttled. If you are releasing a library to access the API, you **MUST** do this.
 - Please watch for 500 or 999 errors and back-off appropriately. It means that you have been throttled.
 - Please set your User-Agent to something identifiable. The default identifiers like `Java/1.4.3` or `lwp-perl` etc tend to get banned from time to time.
-- If you are releasing software or a service for other people to use, your software or service MUST NOT add any links without a user\u2019s explicit direction. Likewise, you **MUST NOT** modify any urls except under the user\u2019s explicit direction.
+- If you are releasing software or a service for other people to use, your software or service MUST NOT add any links without a user’s explicit direction. Likewise, you **MUST NOT** modify any urls except under the user’s explicit direction.
 
 # Methods
 
@@ -21,7 +20,7 @@ All `/v1` APIs require HTTPS requests and HTTP-Auth.
 
 ## `/v1/posts/update` -- Check to see when a user last posted an item
 
-Returns the last update time for the user, as well as the number of new items in the user\u2019s inbox since it was last visited.
+Returns the last update time for the user, as well as the number of new items in the user’s inbox since it was last visited.
 
 Use this before calling posts/all to see if the data has changed since the last fetch.
 
@@ -85,8 +84,8 @@ or url is given, most recent date will be used.
 - `&tag={TAG}+{TAG}+...+{TAG}` (optional) — Filter by this tag.
 - `&dt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter by this date, defaults to the most recent date on which bookmarks were saved.
 - `&url={URL}` (optional) — Fetch a bookmark for this URL, regardless of date.  Note: Be sure to URL-encode the argument value.
-- `&hashes={MD5}+{MD5}+...+{MD5}` (optional) — Fetch multiple bookmarks by one or more URL MD5s regardless of date, separated by URL-encoded spaces (ie. `\u2018+\u2019`).
-- `&meta=yes` (optional) — Include change detection signatures on each item in a \u2018meta\u2019 attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute -- its value will change when any significant field of the bookmark changes.
+- `&hashes={MD5}+{MD5}+...+{MD5}` (optional) — Fetch multiple bookmarks by one or more URL MD5s regardless of date, separated by URL-encoded spaces (ie. `‘+’`).
+- `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute -- its value will change when any significant field of the bookmark changes.
 
 ### Example
 
@@ -184,7 +183,7 @@ you need to fetch this at all.
 - ` &results={xx}` (optional) — Return this many results.
 - `&fromdt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or later
 - `&todt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or earlier
-- `&meta=yes` (optional) — Include change detection signatures on each item in a \u2018meta\u2019 attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute - its value will change when any significant field of the bookmark changes.
+- `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute - its value will change when any significant field of the bookmark changes.
 
 ### Example
 
@@ -239,7 +238,7 @@ This method is intended to provide suggestions for tagging a particular url.
 
 ### Arguments
 
-- `&url={URL}` (required) — URL for which you\u2019d like suggestions
+- `&url={URL}` (required) — URL for which you’d like suggestions
 
 ### Example
 
@@ -330,7 +329,7 @@ Rename an existing tag with a new tag name.
 
 ## `/v1/tags/bundles/all?` -- fetch tag bundles
 
-Retrieve all of a user\u2019s bundles.
+Retrieve all of a user’s bundles.
 
 ### Arguments
 
