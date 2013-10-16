@@ -24,35 +24,35 @@ Since feeds at Delicious see quite a bit of high-volume use, it’s not practica
 
 Feeds at Delicious all share the following base URL prefix:
 
-  - `http://feeds.delicious.com/v2/{format}/`
+- `http://feeds.delicious.com/v2/{format}/`
 
 The placeholder {format} specifies the output format for the feed, which
 currently includes the values rss and json.
 
 All feed formats accept the following query-string parameters:
 
-  - `?count={1..100}`: Limit the results to the given number, between 1 and 100 (default 15)
+- `?count={1..100}`: Limit the results to the given number, between 1 and 100 (default 15)
 
 For RSS format feeds, Delicious performs user-agent detection and, for certain
 news readers, includes enhanced HTML content in items while minimizing the
 amount of machine-readable metadata. This feature can be intentionally
 switched on or disabled with the following URL query-string parameters:
 
-  - `?plain`: Disable enhanced item HTML content.
-  - `?fancy`: Enable enhanced item HTML content.
+- `?plain`: Disable enhanced item HTML content.
+- `?fancy`: Enable enhanced item HTML content.
 
 To help enable JSON-based mashups, there are a few URL query-string parameters
 to tweak the JSON output:
 
-  - `?callback={js call}`: Allows the inclusion of a wrapper function call around the JSON data. The value is filtered by a whitelist consisting of these characters: 0-9 a-z A-Z ()[],._-+=/|\\~?!#$^*: '\"
+- `?callback={js call}`: Allows the inclusion of a wrapper function call around the JSON data. The value is filtered by a whitelist consisting of these characters: 0-9 a-z A-Z ()[],._-+=/|\\~?!#$^*: '\"
 
 The following feed URL patterns use these placeholders:
 
-  - `{format}`: replaced with either “rss” or “json”
-  - `{username}`: replaced with a user’s login name on delicious
-  - `{tag[+tag+...+tag]}`: replaced with a tag or an intersection of tags.
-  - `{url md5}`: is intended for the MD5 hash of a URL.
-  - `{key}`: a security key for the feed, which can be found via the page associated with the feed (eg. inbox, network or bookmarks). Allows visibilty to otherwise private data.
+- `{format}`: replaced with either “rss” or “json”
+- `{username}`: replaced with a user’s login name on delicious
+- `{tag[+tag+...+tag]}`: replaced with a tag or an intersection of tags.
+- `{url md5}`: is intended for the MD5 hash of a URL.
+- `{key}`: a security key for the feed, which can be found via the page associated with the feed (eg. inbox, network or bookmarks). Allows visibilty to otherwise private data.
 
 ## Finally, what are the URLs for Delicious RSS Feeds?
 
