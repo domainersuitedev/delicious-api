@@ -56,66 +56,66 @@ The following feed URL patterns use these placeholders:
 
 ## Finally, what are the URLs for Delicious RSS Feeds?
 
-### Recent bookmarks:
+### Recent bookmarks
 
 `http://feeds.delicious.com/v2/{format}/recent`
 
-### Recent bookmarks by tag:
+### Recent bookmarks by tag
 
 `http://feeds.delicious.com/v2/{format}/tag/{tag[+tag+...+tag]}`
 
-### Bookmarks for a specific user:
+### Bookmarks for a specific user
 
 `http://feeds.delicious.com/v2/{format}/{username}`
 
-### Private bookmarks for a specific user:
+### Private bookmarks for a specific user
 
 `http://feeds.delicious.com/v2/{format}/{username}?private={key}`
 
-### Bookmarks for a specific user by tag(s):
+### Bookmarks for a specific user by tag(s)
 
 `http://feeds.delicious.com/v2/{format}/{username}/{tag[+tag+...+tag]}`
 
-### Private bookmarks for a specific user by tag(s):
+### Private bookmarks for a specific user by tag(s)
 
 `http://feeds.delicious.com/v2/{format}/{username}/{tag[+tag+...+tag]}?private={key}`
 
-### Public summary information about a user:
+### Public summary information about a user
 
 `http://feeds.delicious.com/v2/{format}/userinfo/{username}`
 
-### A list of all public tags for a user:
+### A list of all public tags for a user
 
 `http://feeds.delicious.com/v2/{format}/tags/{username}`
 
-### A list of related public tags for a user tag combination:
+### A list of related public tags for a user tag combination
 
 `http://feeds.delicious.com/v2/{format}/tags/{username}/{tag[+tag+...+tag]}`
 
-### Bookmarks from a user\u2019s subscriptions:
+### Bookmarks from a user\u2019s subscriptions
 
 `http://feeds.delicious.com/v2/{format}/subscriptions/{username}`
 
-### Private feed for a user\u2019s inbox bookmarks from others:
+### Private feed for a user\u2019s inbox bookmarks from others
 
 `http://feeds.delicious.com/v2/{format}/inbox/{username}?private={key}`
 
-### Bookmarks from members of a user\u2019s network:
+### Bookmarks from members of a user\u2019s network
 
 `http://feeds.delicious.com/v2/{format}/network/{username}`
 
-### Bookmarks from members of a user\u2019s network by tag:
+### Bookmarks from members of a user\u2019s network by tag
 
 `http://feeds.delicious.com/v2/{format}/network/{username}/{tag[+tag+...+tag]}`
 
-### A list of a user\u2019s network members:
+### A list of a user\u2019s network members
 
 `http://feeds.delicious.com/v2/{format}/networkmembers/{username}`
 
-### Recent bookmarks for a URL:
+### Recent bookmarks for a URL
 
 `http://feeds.delicious.com/v2/{format}/url/{url md5}`
 
-### Summary information about a URL:
+### Summary information about a URL
 
 `http://feeds.delicious.com/v2/json/urlinfo/{url md5}`
