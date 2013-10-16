@@ -2,13 +2,13 @@
 
 ## What are Delicious Feeds?
 
-For most pages within Delicious, there are associated read-only data feeds for bookmarks and other information displayed in a browser. These feeds come in several formats -- including [RSS](http://en.wikipedia.org/wiki/RSS_(protocol)) and [JSON](http://json.org) -- and offer windows onto what\u2019s going on at Delicious that you can use in news readers, blogs, or your own third-party applications.
+For most pages within Delicious, there are associated read-only data feeds for bookmarks and other information displayed in a browser. These feeds come in several formats -- including [RSS](http://en.wikipedia.org/wiki/RSS_(protocol)) and [JSON](http://json.org) -- and offer windows onto what’s going on at Delicious that you can use in news readers, blogs, or your own third-party applications.
 
 ## What is RSS?
 
 RSS is a format used by many news sites and blogs to publish content on the web. Using RSS to publish content enables [news readers](http://www.opencommunity.co.uk/vienna2.php) and [personalized start pages](http://my.yahoo.com) to pull new stuff all into one place. Applications that understand RSS can do the footwork and provide a one-stop shop to help readers keep on top of things without needing to surf all over the web in person. 
 
-Accordingly, Delicious offers links to companion RSS feeds on most Profile pages to help you keep track of links from other users. Look for the \u201crss\u201d link just under a user\u2019s profile picture. 
+Accordingly, Delicious offers links to companion RSS feeds on most Profile pages to help you keep track of links from other users. Look for the “rss” link just under a user’s profile picture. 
 
 In addition, many web browsers -- such as [Firefox](http://www.mozilla.org/en-US/firefox/livebookmarks.html) and [Internet Explorer](http://windows.microsoft.com/en-NZ/windows-vista/Using-feeds-RSS) -- automatically detect RSS feeds associated with pages and offer convenient ways to subscribe.
 
@@ -18,7 +18,7 @@ JSON, which stands for [JavaScript Object Notation](http://json.org), is a light
 
 ## How fresh are the feeds?
 
-Since feeds at Delicious see quite a bit of high-volume use, it\u2019s not practical to offer immediately fresh results at all times. In particular, RSS feeds may not be updated more than twice an hour, and JSON feeds are likely to show a degree of staleness at times as well. Polling feeds more often will not yield better data, and may result in HTTP 503 Unavailable errors indicating either that your application has been blocked or the servers are otherwise temporarily throttling your requests.
+Since feeds at Delicious see quite a bit of high-volume use, it’s not practical to offer immediately fresh results at all times. In particular, RSS feeds may not be updated more than twice an hour, and JSON feeds are likely to show a degree of staleness at times as well. Polling feeds more often will not yield better data, and may result in HTTP 503 Unavailable errors indicating either that your application has been blocked or the servers are otherwise temporarily throttling your requests.
 
 ## What API Feeds are available at Delicious?
 
@@ -48,8 +48,8 @@ to tweak the JSON output:
 
 The following feed URL patterns use these placeholders:
 
-  - `{format}`: replaced with either \u201crss\u201d or \u201cjson\u201d
-  - `{username}`: replaced with a user\u2019s login name on delicious
+  - `{format}`: replaced with either “rss” or “json”
+  - `{username}`: replaced with a user’s login name on delicious
   - `{tag[+tag+...+tag]}`: replaced with a tag or an intersection of tags.
   - `{url md5}`: is intended for the MD5 hash of a URL.
   - `{key}`: a security key for the feed, which can be found via the page associated with the feed (eg. inbox, network or bookmarks). Allows visibilty to otherwise private data.
@@ -92,23 +92,23 @@ The following feed URL patterns use these placeholders:
 
 `http://feeds.delicious.com/v2/{format}/tags/{username}/{tag[+tag+...+tag]}`
 
-### Bookmarks from a user\u2019s subscriptions
+### Bookmarks from a user’s subscriptions
 
 `http://feeds.delicious.com/v2/{format}/subscriptions/{username}`
 
-### Private feed for a user\u2019s inbox bookmarks from others
+### Private feed for a user’s inbox bookmarks from others
 
 `http://feeds.delicious.com/v2/{format}/inbox/{username}?private={key}`
 
-### Bookmarks from members of a user\u2019s network
+### Bookmarks from members of a user’s network
 
 `http://feeds.delicious.com/v2/{format}/network/{username}`
 
-### Bookmarks from members of a user\u2019s network by tag
+### Bookmarks from members of a user’s network by tag
 
 `http://feeds.delicious.com/v2/{format}/network/{username}/{tag[+tag+...+tag]}`
 
-### A list of a user\u2019s network members
+### A list of a user’s network members
 
 `http://feeds.delicious.com/v2/{format}/networkmembers/{username}`
 
