@@ -1,4 +1,3 @@
-Delicious API
-=============
+# Delicious API Documentation
 
 Delicious API Documentation
