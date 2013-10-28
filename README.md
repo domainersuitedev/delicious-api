@@ -17,7 +17,7 @@ All `/v1` APIs require HTTPS requests and HTTP-Auth.
 
 * [Posts](https://github.com/avos/delicious-api/blob/master/api/Posts.md)
 * [Tags](https://github.com/avos/delicious-api/blob/master/api/Tags.md)
-* [Tag Bundles](https://github.com/avos/delicious-api/blob/master/api/TagsBundle.md)
+* [Tag Bundles](https://github.com/avos/delicious-api/blob/master/api/TagBundles.md)
 
 ## Feedback
 
