@@ -8,19 +8,18 @@ All `/v1` APIs require HTTPS requests and HTTP-Auth.
 
 ## Keep in Mind
 
-- Please let us know if you are going to release software that uses this publicly, so that we can at least have a heads-up and hopefully test things out beforehand.
-- Please wait **at least one second** between queries, or you are likely to get automatically throttled. If you are releasing a library to access the API, you **MUST** do this.
+- Please wait **at least one second** between HTTP queries, or you are likely to get automatically throttled. If you are releasing a library to access the API, you **MUST** do this.
 - Please watch for 500 or 999 errors and back-off appropriately. It means that you have been throttled.
 - Please set your User-Agent to something identifiable. The default identifiers like `Java/1.4.3` or `lwp-perl` etc tend to get banned from time to time.
 - If you are releasing software or a service for other people to use, your software or service MUST NOT add any links without a user’s explicit direction. Likewise, you **MUST NOT** modify any urls except under the user’s explicit direction.
 
 # Methods
 
-## Update
+## Last Update
 
 ## `/v1/posts/update` — Check to see when a user last posted an item
 
-Returns the last update time for the user, as well as the number of new items in the user’s inbox since it was last visited.
+Returns the last updated time for the user, as well as the number of new items in the user’s inbox since it was last visited.
 
 Use this before calling posts/all to see if the data has changed since the last fetch.
 
@@ -86,6 +85,7 @@ or url is given, most recent date will be used.
 - `&url={URL}` (optional) — Fetch a bookmark for this URL, regardless of date.  Note: Be sure to URL-encode the argument value.
 - `&hashes={MD5}+{MD5}+...+{MD5}` (optional) — Fetch multiple bookmarks by one or more URL MD5s regardless of date, separated by URL-encoded spaces (ie. `‘+’`).
 - `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute — its value will change when any significant field of the bookmark changes.
+- `&tag_separator=comma` (optional) - Use commas instead of spaces to separate tags (recommended for multi-word tag disambiguation.)
 
 ### Example
 
