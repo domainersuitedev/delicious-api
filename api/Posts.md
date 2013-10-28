@@ -1,21 +1,16 @@
-# APIs — Application Programming Interface
+# Posts
 
-This document and the APIs herein are subject to change at any time. We will version the API, but may deprecate early versions aggressively.
+Posts are the atomic building blocks of Delicious. Typically, a Post contains a link and several meta data.
 
-## Authentication
-
-All `/v1` APIs require HTTPS requests and HTTP-Auth.
-
-## Keep in Mind
-
-- Please wait **at least one second** between HTTP queries, or you are likely to get automatically throttled. If you are releasing a library to access the API, you **MUST** do this.
-- Please watch for 500 or 999 errors and back-off appropriately. It means that you have been throttled.
-- Please set your User-Agent to something identifiable. The default identifiers like `Java/1.4.3` or `lwp-perl` etc tend to get banned from time to time.
-- If you are releasing software or a service for other people to use, your software or service MUST NOT add any links without a user’s explicit direction. Likewise, you **MUST NOT** modify any urls except under the user’s explicit direction.
-
-# Methods
-
-## Last Update
+* [`/v1/posts/update`](#v1postsupdate--check-to-see-when-a-user-last-posted-an-item) — Check to see when a user last posted an item
+* [`/v1/posts/add?`](#v1postsadd--add-a-new-bookmark) — add a new bookmark
+* [`/v1/posts/delete?`](#v1postsdelete--delete-an-existing-bookmark) — delete an existing bookmark
+* [`/v1/posts/get?`](#v1postsget--get-bookmark-for-a-single-date-or-fetch-specific-items) — get bookmark for a single date, or fetch specific items
+* [`/v1/posts/recent?`](#v1postsrecent--fetch-recent-bookmarks) — fetch recent bookmarks
+* [`/v1/posts/dates?`](#v1postsdates--list-dates-on-which-bookmarks-were-posted) — list dates on which bookmarks were posted
+* [`/v1/posts/all?`](#v1postsall--fetch-all-bookmarks-by-date-or-index-range) — fetch all bookmarks by date or index range
+* [`/v1/posts/all?hashes`](#v1postsallhashes--fetch-a-change-detection-manifest-of-all-items) — fetch a change detection manifest of all items
+* [`/v1/posts/suggest`](#v1postssuggest--fetch-popular-recommended-and-network-tags-for-a-specific-url) — fetch popular, recommended and network tags for a specific url
 
 ## `/v1/posts/update` — Check to see when a user last posted an item
 
@@ -28,8 +23,6 @@ Use this before calling posts/all to see if the data has changed since the last 
 ```xml
 <update time="2005-03-28T17:25:52Z" inboxnew="0" />
 ```
-
-## Posts
 
 ## `/v1/posts/add?` — add a new bookmark
 
@@ -277,107 +270,3 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/suggest?url=http://yahoo.c
 </suggest>
 ```
 
-## Tags
-
-## `/v1/tags/get` — fetch all tags
-
-Returns a list of tags and number of times used by a user.
-
-### Example Response
-
-```xml
-<tags>
-<tag count="1" tag="activedesktop" />
-<tag count="1" tag="business" />
-<tag count="3" tag="radio" />
-<tag count="5" tag="xml" />
-<tag count="1" tag="xp" />
-<tag count="1" tag="xpi" />
-</tags>
-```
-
-## `/v1/tags/delete?` — delete a tag from all posts
-
-Delete an existing tag.
-
-### Arguments
-
-- `&tag={TAG}` (required) — Tag to delete
-
-### Example Response
-
-```xml
-<result>done</result>
-```
-
-## `/v1/tags/rename?` — rename a tag on all posts
-
-Rename an existing tag with a new tag name.
-
-### Arguments
-
-- `&old={TAG}` (required) — Tag to rename.
-- `&new={TAG}` (required) — New tag name.
-
-### Example Response
-
-```xml
-<result>done</result>
-```
-
-## Tag Bundles
-
-## `/v1/tags/bundles/all?` — fetch tag bundles
-
-Retrieve all of a user’s bundles.
-
-### Arguments
-
-- `&bundle={NAME}` (optional) — Fetch just the named bundle.
-
-### Example response
-
-```xml
-<bundles>
-<bundle name="music" tags="ipod mp3 music" />
-</bundles>
-```
-
-## `/v1/tags/bundles/set?` — assign a set of tags to a bundle
-
-Assign a set of tags to a single bundle, wipes away previous settings for
-bundle.
-
-### Arguments
-
-
-- `&bundle={NAME}` (required) — Name of the bundle
-- `&tags={TAG}+{TAG}+...+{TAG}` (required) — List of tags, comma-separated.
-
-### Example response
-
-If the bundle was created:
-
-```xml
-<result>ok</result>
-```
-
-If the bundle was not created:
-
-```xml
-<result>you must supply a bundle name and at least one tag</result>
-```
-
-## `/v1/tags/bundles/delete?` - delete a tag bundle
-
-Delete a bundle.
-
-### Arguments
-
-- `&bundle={NAME}` (required) — Name of the bundle
-
-### Example response
-
-```xml
-<result>done</result>
-```
