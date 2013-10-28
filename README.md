@@ -1,6 +1,6 @@
 # Delicious API Documentation
 
-<img src="https://delicious.com/img/logo.png" alt="Delicious logo" align="right" />
+<img src="https://delicious.com/img/logo.png" alt="Delicious logo" align="right" width="128" />
 
 This document and the APIs herein are subject to change at any time. We will version the API, but may deprecate early versions aggressively.
 
