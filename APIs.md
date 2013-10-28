@@ -8,7 +8,6 @@ All `/v1` APIs require HTTPS requests and HTTP-Auth.
 
 ## Keep in Mind
 
-- Please let us know if you are going to release software that uses this publicly, so that we can at least have a heads-up and hopefully test things out beforehand.
 - Please wait **at least one second** between queries, or you are likely to get automatically throttled. If you are releasing a library to access the API, you **MUST** do this.
 - Please watch for 500 or 999 errors and back-off appropriately. It means that you have been throttled.
 - Please set your User-Agent to something identifiable. The default identifiers like `Java/1.4.3` or `lwp-perl` etc tend to get banned from time to time.
