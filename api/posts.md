@@ -173,7 +173,7 @@ Fetch all bookmarks by date or index range. Please use sparingly. Call the updat
 
 - `&tag={TAG}` (optional) — Filter by this tag.
 - `&start={xx}` (optional) — Start returning posts this many results into the set.
-- `&results={xx}` (optional) — Return this many results.
+- `&results={xx}` (optional) — Return up to this many results. By default, up to 1000 bookmarks are returned, and a maximum of 100000 bookmarks is supported via this API.
 - `&fromdt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or later
 - `&todt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or earlier
 - `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute - its value will change when any significant field of the bookmark changes.
@@ -201,7 +201,7 @@ tag="news media" time="2005-11-29T20:30:05Z" />
 
 Returns a change manifest of all posts. Call the update function to see if you need to fetch this at all.
 
-This method is intended to provide information on changed bookmarks without the necessity of a complete download of all post data.
+This method is intended to provide information on changed bookmarks, without the overhead of a complete download of all post data. By default, it returns a hash for every bookmark in the user's account.
 
 Each post element returned offers a `url` attribute containing an URL MD5, with an associated `meta` attribute containing the current change detection signature for that bookmark.
 
