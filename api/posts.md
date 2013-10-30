@@ -12,9 +12,11 @@ Posts are the atomic building blocks of Delicious. Typically, a Post contains a 
 * [`/v1/posts/all?hashes`](#v1postsallhashes--fetch-a-change-detection-manifest-of-all-items) — fetch a change detection manifest of all items
 * [`/v1/posts/suggest`](#v1postssuggest--fetch-popular-recommended-and-network-tags-for-a-specific-url) — fetch popular, recommended and network tags for a specific url
 
-## `/v1/posts/update` — Check to see when a user last posted an item
+---
 
-Returns the last updated time for the user, as well as the number of new items in the user’s inbox since it was last visited.
+## `/v1/posts/update`
+
+Check to see when a user last posted an item. Returns the last updated time for the user, as well as the number of new items in the user’s inbox since it was last visited.
 
 Use this before calling posts/all to see if the data has changed since the last fetch.
 
@@ -24,9 +26,9 @@ Use this before calling posts/all to see if the data has changed since the last 
 <update time="2005-03-28T17:25:52Z" inboxnew="0" />
 ```
 
-## `/v1/posts/add?` — add a new bookmark
+## `/v1/posts/add?`
 
-Add a post to Delicious.
+Add a new post to Delicious.
 
 ### Arguments
 
@@ -52,9 +54,9 @@ If the post failed:
 <result code="something went wrong" />
 ```
 
-## `/v1/posts/delete?` — delete an existing bookmark
+## `/v1/posts/delete?`
 
-Delete a post from Delicious.
+Delete an existing post from Delicious.
 
 ### Arguments
 
@@ -66,10 +68,9 @@ Delete a post from Delicious.
 <result code="done" />
 ```
 
-## `/v1/posts/get?` — get bookmark for a single date, or fetch specific items
+## `/v1/posts/get?`
 
-Returns one or more posts on a single day matching the Arguments. If no date
-or url is given, most recent date will be used.
+Returns one or more posts on a single day matching the arguments. If no date or url is given, most recent date will be used.
 
 ### Arguments
 
@@ -113,7 +114,7 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/get?url=http%3A%2F%2Fwww.y
 </posts>
 ```
 
-## `/v1/posts/recent?` — fetch recent bookmarks
+## `/v1/posts/recent?`
 
 Returns a list of the most recent posts, filtered by argument. Maximum 100.
 
@@ -141,7 +142,7 @@ tag="news media" time="2005-11-29T20:30:05Z" />
 </posts>
 ```
 
-## `/v1/posts/dates?` — list dates on which bookmarks were posted
+## `/v1/posts/dates?`
 
 Returns a list of dates with the number of posts at each date.
 
@@ -164,10 +165,9 @@ Returns a list of dates with the number of posts at each date.
 </dates>
 ```
 
-## `/v1/posts/all?` — fetch all bookmarks by date or index range
+## `/v1/posts/all?`
 
-Returns all posts. Please use sparingly. Call the update function to see if
-you need to fetch this at all.
+Fetch all bookmarks by date or index range. Please use sparingly. Call the update function to see if you need to fetch this at all.
 
 ### Arguments
 
@@ -197,7 +197,7 @@ tag="news media" time="2005-11-29T20:30:05Z" />
 </posts>
 ```
 
-## `/v1/posts/all?hashes` — fetch a change detection manifest of all items
+## `/v1/posts/all?hashes`
 
 Returns a change manifest of all posts. Call the update function to see if you need to fetch this at all.
 
@@ -223,11 +223,9 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/all?hashes
 </posts>
 ```
 
-## `/v1/posts/suggest` — fetch popular, recommended and network tags for a specific url
+## `/v1/posts/suggest`
 
-Returns a list of popular tags, recommended tags and network tags for a user.
-
-This method is intended to provide suggestions for tagging a particular url.
+Returns a list of popular tags, recommended tags and network tags for a user. This method is intended to provide suggestions for tagging a particular url.
 
 ### Arguments
 
@@ -269,4 +267,3 @@ $ curl https://user:passwd@api.delicious.com/v1/posts/suggest?url=http://yahoo.c
 <network>for:theteam</network>
 </suggest>
 ```
-

@@ -6,7 +6,9 @@ Tag Bundle is a collection of tags. Use Tag Bundle to filter links by a set of t
 * [`/v1/tags/bundles/set?`](#v1tagsbundlesset--assign-a-set-of-tags-to-a-bundle) — assign a set of tags to a bundle'
 * [`/v1/tags/bundles/delete?`](#v1tagsbundlesdelete---delete-a-tag-bundle) - delete a tag bundle
 
-## `/v1/tags/bundles/all?` — fetch tag bundles
+---
+
+## `/v1/tags/bundles/all?`
 
 Retrieve all of a user’s bundles.
 
@@ -22,13 +24,11 @@ Retrieve all of a user’s bundles.
 </bundles>
 ```
 
-## `/v1/tags/bundles/set?` — assign a set of tags to a bundle
+## `/v1/tags/bundles/set?`
 
-Assign a set of tags to a single bundle, wipes away previous settings for
-bundle.
+Assign a set of tags to a single bundle, wipes away previous settings for bundle.
 
 ### Arguments
-
 
 - `&bundle={NAME}` (required) — Name of the bundle
 - `&tags={TAG}+{TAG}+...+{TAG}` (required) — List of tags, comma-separated.
@@ -47,9 +47,9 @@ If the bundle was not created:
 <result>you must supply a bundle name and at least one tag</result>
 ```
 
-## `/v1/tags/bundles/delete?` - delete a tag bundle
+## `/v1/tags/bundles/delete?`
 
-Delete a bundle.
+Delete a tag bundle.
 
 ### Arguments
 
