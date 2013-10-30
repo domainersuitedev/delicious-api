@@ -2,9 +2,9 @@
 
 Tag Bundle is a collection of tags. Use Tag Bundle to filter links by a set of tags at a time.
 
-* [`/v1/tags/bundles/all?`](#v1tagsbundlesall--fetch-tag-bundles) — fetch tag bundles
-* [`/v1/tags/bundles/set?`](#v1tagsbundlesset--assign-a-set-of-tags-to-a-bundle) — assign a set of tags to a bundle'
-* [`/v1/tags/bundles/delete?`](#v1tagsbundlesdelete---delete-a-tag-bundle) - delete a tag bundle
+* [`/v1/tags/bundles/all?`](#v1tagsbundlesall) — Fetch tag bundles
+* [`/v1/tags/bundles/set?`](#v1tagsbundlesset) — Assign a set of tags to a bundle'
+* [`/v1/tags/bundles/delete?`](#v1tagsbundlesdelete) - Delete a tag bundle
 
 ---
 

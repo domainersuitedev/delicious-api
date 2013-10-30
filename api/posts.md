@@ -2,15 +2,15 @@
 
 Posts are the atomic building blocks of Delicious. Typically, a Post contains a link and several meta data.
 
-* [`/v1/posts/update`](#v1postsupdate--check-to-see-when-a-user-last-posted-an-item) — Check to see when a user last posted an item
-* [`/v1/posts/add?`](#v1postsadd--add-a-new-bookmark) — add a new bookmark
-* [`/v1/posts/delete?`](#v1postsdelete--delete-an-existing-bookmark) — delete an existing bookmark
-* [`/v1/posts/get?`](#v1postsget--get-bookmark-for-a-single-date-or-fetch-specific-items) — get bookmark for a single date, or fetch specific items
-* [`/v1/posts/recent?`](#v1postsrecent--fetch-recent-bookmarks) — fetch recent bookmarks
-* [`/v1/posts/dates?`](#v1postsdates--list-dates-on-which-bookmarks-were-posted) — list dates on which bookmarks were posted
-* [`/v1/posts/all?`](#v1postsall--fetch-all-bookmarks-by-date-or-index-range) — fetch all bookmarks by date or index range
-* [`/v1/posts/all?hashes`](#v1postsallhashes--fetch-a-change-detection-manifest-of-all-items) — fetch a change detection manifest of all items
-* [`/v1/posts/suggest`](#v1postssuggest--fetch-popular-recommended-and-network-tags-for-a-specific-url) — fetch popular, recommended and network tags for a specific url
+* [`/v1/posts/update`](#v1postsupdate) — Check to see when a user last posted an item
+* [`/v1/posts/add?`](#v1postsadd) — Add a new bookmark
+* [`/v1/posts/delete?`](#v1postsdelete) — Delete an existing bookmark
+* [`/v1/posts/get?`](#v1postsget) — Get bookmark for a single date, or fetch specific items
+* [`/v1/posts/recent?`](#v1postsrecent) — Fetch recent bookmarks
+* [`/v1/posts/dates?`](#v1postsdates) — List dates on which bookmarks were posted
+* [`/v1/posts/all?`](#v1postsall) — Fetch all bookmarks by date or index range
+* [`/v1/posts/all?hashes`](#v1postsallhashes) — Fetch a change detection manifest of all items
+* [`/v1/posts/suggest`](#v1postssuggest) — Fetch popular, recommended and network tags for a specific url
 
 ---
 
