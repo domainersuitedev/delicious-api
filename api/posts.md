@@ -34,7 +34,7 @@ Add a new post to Delicious.
 
 - `&url={URL}` (required) — The url of the item.
 - `&description={...}` (required) — The description of the item.
-- `&extended={...}` (optional) — Botes for the item.
+- `&extended={...}` (optional) — Notes for the item.
 - `&tags={...}` (optional) — Tags for the item (comma delimited).
 - `&dt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Datestamp of the item (format “CCYY-MM-DDThh:mm:ssZ”). Requires a LITERAL “T” and “Z” like in ISO8601 at http://www.cl.cam.ac.uk/~mgk25/iso-time.html for Example: `1984-09-01T14:21:31Z`
 - `&replace=no` (optional) — Don’t replace post if given url has already been posted.
