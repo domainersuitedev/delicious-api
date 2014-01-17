@@ -62,4 +62,20 @@ https://delicious.com/token?client_id=f5dad5a834775d3811cdcfd6a37af312&client_se
 
 ## API call with access token
 
+To access protected resource, simply include access token in HTTP header:
+
+```
+GET ... HTTP/1.1
+...
+Authorization: Bearer <ACCESS_TOKEN>
+...
+```
+
+You can always test with curl
+
+```
+curl "https://delicious.com/<API_URL>" -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+
 
