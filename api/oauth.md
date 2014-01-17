@@ -10,7 +10,7 @@ OAuth 2.0 is supported on Delicious now, and here are the steps you need to take
 
 ---
 
-## `/auth`
+## `/auth/authorize`
  Request for users' authorization
 
 ### Parameters
@@ -29,7 +29,7 @@ https://www.delicious.com/auth?client_id=f5dad5a834775d3811cdcfd6a37af312&redire
 https://www.example.com/redirect?code=fa746b2eb266cab06f34fb7bc3d51160
 
 
-## `/token`
+## `/auth/token`
   Get access_token
 
 ### Parameters
