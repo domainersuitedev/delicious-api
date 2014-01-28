@@ -1,6 +1,8 @@
 #OAuth
 
-OAuth 2.0 is supported on Delicious now, and here are the steps you need to take if you decide to use it in your development.
+OAuth 2.0 is supported on Delicious now, and here are the steps you need to take if you decide to use it in your development. 
+
+You can always create an application [here](https://delicious.com/settings/developer). (Log in to Delicious if it sends you to landing page)
 
 * Send request to Delicious for users' authorization
 * Delicious present an authorization page to users on which they decide to authorize or not
