@@ -24,7 +24,7 @@ You can always create an application [here](https://delicious.com/settings/devel
 
 #### Example request
 
-https://delicious.com/auth/authorize?client_id=f5dad5a834775d3811cdcfd6a37af312&redirect_uri=www.example.com/redirect
+https://delicious.com/auth/authorize?client_id=f5dad5a834775d3811cdcfd6a37af312&redirect_uri=http://www.example.com/redirect
 
 #### Example result
 
@@ -48,7 +48,7 @@ https://www.example.com/redirect?code=fa746b2eb266cab06f34fb7bc3d51160
 
 #### Example request
 
-https://avosapi.delicious.com/api/v1/oauth/token?client_id=f5dad5a834775d3811cdcfd6a37af312&client_secret=7363879fee6c3ab0f93efbd24111ad34&grant_type=code&redirect_uri=www.example.com/redirect&code=fa746b2eb266cab06f34fb7bc3d51160
+https://avosapi.delicious.com/api/v1/oauth/token?client_id=f5dad5a834775d3811cdcfd6a37af312&client_secret=7363879fee6c3ab0f93efbd24111ad34&grant_type=code
 
 #### Example result
 
