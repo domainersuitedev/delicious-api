@@ -11,7 +11,7 @@ OAuth 2.0 is supported on Delicious now, and here are the steps you need to take
 ---
 
 ## `/auth/authorize`
- Request for users' authorization
+ Request for users' authorization. 
 
 ### Parameters
 
@@ -22,7 +22,7 @@ OAuth 2.0 is supported on Delicious now, and here are the steps you need to take
 
 #### Example request
 
-https://www.delicious.com/auth?client_id=f5dad5a834775d3811cdcfd6a37af312&redirect_uri=www.example.com/redirect
+https://www.delicious.com/auth/authorize?client_id=f5dad5a834775d3811cdcfd6a37af312&redirect_uri=www.example.com/redirect
 
 #### Example result
 
@@ -46,7 +46,7 @@ https://www.example.com/redirect?code=fa746b2eb266cab06f34fb7bc3d51160
 
 #### Example request
 
-https://delicious.com/token?client_id=f5dad5a834775d3811cdcfd6a37af312&client_secret=7363879fee6c3ab0f93efbd24111ad34&grant_type=code&redirect_uri=www.example.com/redirect&code=fa746b2eb266cab06f34fb7bc3d51160
+https://avosapi.delicious.com/api/v1/oauth/token?client_id=f5dad5a834775d3811cdcfd6a37af312&client_secret=7363879fee6c3ab0f93efbd24111ad34&grant_type=code&redirect_uri=www.example.com/redirect&code=fa746b2eb266cab06f34fb7bc3d51160
 
 #### Example result
 
