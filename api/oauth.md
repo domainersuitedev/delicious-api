@@ -24,7 +24,7 @@ You can always create an application [here](https://delicious.com/settings/devel
 
 #### Example request
 
-https://www.delicious.com/auth/authorize?client_id=f5dad5a834775d3811cdcfd6a37af312&redirect_uri=www.example.com/redirect
+https://delicious.com/auth/authorize?client_id=f5dad5a834775d3811cdcfd6a37af312&redirect_uri=www.example.com/redirect
 
 #### Example result
 
