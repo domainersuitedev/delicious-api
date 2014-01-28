@@ -11,14 +11,13 @@ This document and the APIs herein are subject to change at any time. We will ver
 
 ## Authentication
 
-All `/v1` APIs require HTTPS requests and HTTP-Auth.
+All `/v1` APIs now use [OAuth 2.0](https://github.com/avos/delicious-api/blog/master/api/oauth.md) for authentication.
 
 ## Objects
 
 * [Posts](https://github.com/avos/delicious-api/blob/master/api/posts.md)
 * [Tags](https://github.com/avos/delicious-api/blob/master/api/tags.md)
 * [Tag Bundles](https://github.com/avos/delicious-api/blob/master/api/tagbundles.md)
-* [OAuth](https://github.com/avos/delicious-api/blog/master/api/oauth.md)
 
 ## Feedback
 
