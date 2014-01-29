@@ -11,7 +11,7 @@ This document and the APIs herein are subject to change at any time. We will ver
 
 ## Authentication
 
-All `/v1` APIs now use [OAuth 2.0](https://github.com/avos/delicious-api/blog/master/api/oauth.md) for authentication.
+All `/v1` APIs now use [OAuth 2.0](https://github.com/avos/delicious-api/blob/master/api/oauth.md) for authentication.
 
 ## Objects
 
