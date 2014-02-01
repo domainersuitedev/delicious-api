@@ -54,7 +54,8 @@ https://avosapi.delicious.com/api/v1/oauth/token?client_id=f5dad5a834775d3811cdc
 
 #### Example result
 
-```{
+```json
+{
     "status": "success",
     "delta_ms": 74,
     "server": "del-api-test",
@@ -62,7 +63,8 @@ https://avosapi.delicious.com/api/v1/oauth/token?client_id=f5dad5a834775d3811cdc
     "api_mgmt_ms": 0,
     "version": "v1",
     "access_token": "7421140-262ce921d8572ab75031bfb505e46a1c"
-}```
+}
+```
 
 ## API call with access token
 
@@ -77,7 +79,7 @@ Authorization: Bearer <ACCESS_TOKEN>
 
 You can always test with curl:
 
-```
+```shell
 curl "https://delicious.com/<API_URL>" -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
