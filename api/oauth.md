@@ -4,21 +4,22 @@ OAuth 2.0 is supported on Delicious now, and here are the steps you need to take
 
 You can always create an application [here](https://delicious.com/settings/developer). (Log in to Delicious if it sends you to landing page)
 
-* Send request to Delicious for users' authorization
-* Delicious present an authorization page to users on which they decide to authorize or not
-* After users' authorization, Delicious will redirect to your redirect url with request token
-* Exchange access_token with request token returned to you in last step
-* Call Delicious API with access_token
+* Send request to Delicious for users’ authorization.
+* Delicious present an authorization page to users on which they decide to authorize or not.
+* After users’ authorization, Delicious will redirect to your redirect url with request token.
+* Exchange `access_token` with request token returned to you in last step.
+* Call Delicious API with `access_token`.
 
 ---
 
 ## `/auth/authorize`
- Request for users' authorization. 
+
+Request for users’ authorization. 
 
 ### Parameters
 
-- `client_id={app_key}` (required)
-- `redirect_uri={www.example.com}` (required)
+- `client_id={app_key}` (required).
+- `redirect_uri={www.example.com}` (required).
 
 ### Examples
 
@@ -32,17 +33,18 @@ https://www.example.com/redirect?code=fa746b2eb266cab06f34fb7bc3d51160
 
 
 ## `/auth/token`
-  Get access_token
+
+Get `access_token`.
 
 ### Parameters
 
-- `client_id={app_key}` (required)
-- `client_secret={app_secret}` (required)
-- `grant_type={code|credentials}` (required)
-- `redirect_uri={www.example.com}` (required)
-- `code={request_token}` (optional) -- required when ```grant_type=code```
-- `username` (optional) -- required when ```grant_type=credentials```
-- `password` (opitional) -- required when ```grant_type=credentials```
+- `client_id={app_key}` (required).
+- `client_secret={app_secret}` (required).
+- `grant_type={code|credentials}` (required).
+- `redirect_uri={www.example.com}` (required).
+- `code={request_token}` (optional) -- required when `grant_type=code`.
+- `username` (optional) -- required when `grant_type=credentials`.
+- `password` (opitional) -- required when `grant_type=credentials`.
 
 ### Examples
 
@@ -73,7 +75,7 @@ Authorization: Bearer <ACCESS_TOKEN>
 ...
 ```
 
-You can always test with curl
+You can always test with curl:
 
 ```
 curl "https://delicious.com/<API_URL>" -H "Authorization: Bearer <ACCESS_TOKEN>"
