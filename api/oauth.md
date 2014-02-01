@@ -42,9 +42,9 @@ Get `access_token`.
 - `client_secret={app_secret}` (required).
 - `grant_type={code|credentials}` (required).
 - `redirect_uri={www.example.com}` (required).
-- `code={request_token}` (optional) -- required when `grant_type=code`.
-- `username` (optional) -- required when `grant_type=credentials`.
-- `password` (opitional) -- required when `grant_type=credentials`.
+- `code={request_token}` (optional) — required when `grant_type=code`.
+- `username` (optional) — required when `grant_type=credentials`.
+- `password` (opitional) — required when `grant_type=credentials`.
 
 ### Examples
 
@@ -82,6 +82,5 @@ You can always test with curl:
 ```shell
 curl "https://delicious.com/<API_URL>" -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
-
 
 
