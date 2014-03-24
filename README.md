@@ -2,6 +2,11 @@
 
 This document and the APIs herein are subject to change at any time. We will version the API, but may deprecate early versions aggressively.
 
+## RSS and JSON feeds
+
+Documentation for feeds of public or private bookmarks can be found here: https://delicious.com/rss
+
+
 ## Keep in Mind
 
 - Please wait **at least one second** between HTTP queries, or you are likely to get automatically throttled. If you are releasing a library to access the API, you **must** do this.
