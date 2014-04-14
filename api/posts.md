@@ -171,6 +171,7 @@ Fetch all bookmarks by date or index range. Please use sparingly. Call the updat
 
 ### Arguments
 
+- `&tag_separator=comma` (optional) - (Recommended) Returns tags separated by a comma, instead of a space character. A space separator is currently used by default to avoid breaking existing clients - these default may change in future API revisions.
 - `&tag={TAG}` (optional) — Filter by this tag.
 - `&start={xx}` (optional) — Start returning posts this many results into the set.
 - `&results={xx}` (optional) — Return up to this many results. By default, up to 1000 bookmarks are returned, and a maximum of 100000 bookmarks is supported via this API.
