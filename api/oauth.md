@@ -85,7 +85,7 @@ Authorization: Bearer <ACCESS_TOKEN>
 You can always test with curl:
 
 ```shell
-curl "https://delicious.com/<API_URL>" -H "Authorization: Bearer <ACCESS_TOKEN>"
+curl "https://api.del.icio.us/<API_URL>" -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 
