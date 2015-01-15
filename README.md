@@ -13,6 +13,7 @@ Documentation for feeds of public or private bookmarks can be found here: https:
 - Please watch for 500 or 999 errors and back-off appropriately. It means that you have been throttled.
 - Please set your User-Agent to something identifiable. The default identifiers like `Java/1.4.3` or `lwp-perl` etc tend to get banned from time to time.
 - If you are releasing software or a service for other people to use, your software or service **must not** add any links without a user’s explicit direction. Likewise, you **must not** modify any urls except under the user’s explicit direction.
+- API calls of Objects returns as an Xml object.
 
 ## Authentication
 

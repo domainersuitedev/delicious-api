@@ -23,7 +23,7 @@ Use this before calling posts/all to see if the data has changed since the last 
 ### Example Response
 
 ```xml
-<update time="2005-03-28T17:25:52Z" inboxnew="0" />
+<update code="200" inboxnew="" message="success" time="2015-01-15T17:35:48Z"/>
 ```
 
 ## `/v1/posts/add?`
