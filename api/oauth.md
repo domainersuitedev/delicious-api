@@ -35,9 +35,9 @@ Example result:
 https://www.example.com/redirect?code=fa746b2eb266cab06f34fb7bc3d51160
 ```
 
-## `/auth/token`
+## `/oauth/token`
 
-Get `access_token`.
+Get `access_token` - requires an HTTP POST to https://avosapi.delicious.com/api/v1/.
 
 ### Parameters
 
