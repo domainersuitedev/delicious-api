@@ -2,9 +2,9 @@
 
 Tags are small text created by user to describe a link. It helps people to organized a large amount of links.
 
-* [`/v1/tags/get`](#v1tagsget) — Fetch all tags
-* [`/v1/tags/delete?`](#v1tagsdelete) — Delete a tag from all posts
-* [`/v1/tags/rename?`](#v1tagsrename) — Rename a tag on all posts
+* [`/v1/tags/get`](#v1tagsget) — Fetch all tags.
+* [`/v1/tags/delete?`](#v1tagsdelete) — Delete a tag from all posts.
+* [`/v1/tags/rename?`](#v1tagsrename) — Rename a tag on all posts.
 
 ---
 
@@ -31,7 +31,7 @@ Delete an existing tag from all posts
 
 ### Arguments
 
-- `&tag={TAG}` (required) — Tag to delete
+- `&tag={TAG}` (required) — Tag to delete.
 
 ### Example Response
 

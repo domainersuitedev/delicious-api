@@ -2,15 +2,15 @@
 
 Posts are the atomic building blocks of Delicious. Typically, a Post contains a link and several meta data.
 
-* [`/v1/posts/update`](#v1postsupdate) — Check to see when a user last posted an item
-* [`/v1/posts/add?`](#v1postsadd) — Add a new bookmark
-* [`/v1/posts/delete?`](#v1postsdelete) — Delete an existing bookmark
-* [`/v1/posts/get?`](#v1postsget) — Get bookmark for a single date, or fetch specific items
-* [`/v1/posts/recent?`](#v1postsrecent) — Fetch recent bookmarks
-* [`/v1/posts/dates?`](#v1postsdates) — List dates on which bookmarks were posted
-* [`/v1/posts/all?`](#v1postsall) — Fetch all bookmarks by date or index range
-* [`/v1/posts/all?hashes`](#v1postsallhashes) — Fetch a change detection manifest of all items
-* [`/v1/posts/suggest`](#v1postssuggest) — Fetch popular, recommended and network tags for a specific url
+* [`/v1/posts/update`](#v1postsupdate) — Check to see when a user last posted an item.
+* [`/v1/posts/add?`](#v1postsadd) — Add a new bookmark.
+* [`/v1/posts/delete?`](#v1postsdelete) — Delete an existing bookmark.
+* [`/v1/posts/get?`](#v1postsget) — Get bookmark for a single date, or fetch specific items.
+* [`/v1/posts/recent?`](#v1postsrecent) — Fetch recent bookmarks.
+* [`/v1/posts/dates?`](#v1postsdates) — List dates on which bookmarks were posted.
+* [`/v1/posts/all?`](#v1postsall) — Fetch all bookmarks by date or index range.
+* [`/v1/posts/all?hashes`](#v1postsallhashes) — Fetch a change detection manifest of all items.
+* [`/v1/posts/suggest`](#v1postssuggest) — Fetch popular, recommended and network tags for a specific url.
 
 ---
 
@@ -23,7 +23,7 @@ Use this before calling posts/all to see if the data has changed since the last 
 ### Example Response
 
 ```xml
-<update time="2005-03-28T17:25:52Z" inboxnew="0" />
+<update code="200" inboxnew="" message="success" time="2015-01-15T17:35:48Z"/>
 ```
 
 ## `/v1/posts/add?`
@@ -36,9 +36,9 @@ Add a new post to Delicious.
 - `&description={...}` (required) — The description of the item.
 - `&extended={...}` (optional) — Notes for the item.
 - `&tags={...}` (optional) — Tags for the item (comma delimited).
-- `&dt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Datestamp of the item (format “CCYY-MM-DDThh:mm:ssZ”). Requires a LITERAL “T” and “Z” like in ISO8601 at http://www.cl.cam.ac.uk/~mgk25/iso-time.html for Example: `1984-09-01T14:21:31Z`
+- `&dt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Datestamp of the item (format “CCYY-MM-DDThh:mm:ssZ”). Requires a LITERAL “T” and “Z” like in ISO8601 at http://www.cl.cam.ac.uk/~mgk25/iso-time.html for Example: `1984-09-01T14:21:31Z`.
 - `&replace=no` (optional) — Don’t replace post if given url has already been posted.
-- `&shared=no` (optional) — Make the item private
+- `&shared=no` (optional) — Make the item private.
 
 ### Example Response
 
@@ -77,9 +77,9 @@ Returns one or more posts on a single day matching the arguments. If no date or 
 - `&tag={TAG}+{TAG}+...+{TAG}` (optional) — Filter by this tag.
 - `&dt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter by this date, defaults to the most recent date on which bookmarks were saved.
 - `&url={URL}` (optional) — Fetch a bookmark for this URL, regardless of date.  Note: Be sure to URL-encode the argument value.
-- `&hashes={MD5}+{MD5}+...+{MD5}` (optional) — Fetch multiple bookmarks by one or more URL MD5s regardless of date, separated by URL-encoded spaces (ie. `‘+’`).
+- `&hashes={MD5}+{MD5}+...+{MD5}` (optional) — Fetch multiple bookmarks by one or more URL MD5s regardless of date, separated by URL-encoded spaces (i.e. `‘+’`).
 - `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute — its value will change when any significant field of the bookmark changes.
-- `&tag_separator=comma` (optional) - Use commas instead of spaces to separate tags (recommended for multi-word tag disambiguation.)
+- `&tag_separator=comma` (optional) - Use commas instead of spaces to separate tags (recommended for multi-word tag disambiguation).
 
 ### Example
 
@@ -148,7 +148,7 @@ Returns a list of dates with the number of posts at each date.
 
 ### Arguments
 
-- `&tag={TAG}` (optional) — Filter by this tag
+- `&tag={TAG}` (optional) — Filter by this tag.
 
 ### Example
 
@@ -171,11 +171,12 @@ Fetch all bookmarks by date or index range. Please use sparingly. Call the updat
 
 ### Arguments
 
+- `&tag_separator=comma` (optional) - (Recommended) Returns tags separated by a comma, instead of a space character. A space separator is currently used by default to avoid breaking existing clients - these default may change in future API revisions.
 - `&tag={TAG}` (optional) — Filter by this tag.
 - `&start={xx}` (optional) — Start returning posts this many results into the set.
 - `&results={xx}` (optional) — Return up to this many results. By default, up to 1000 bookmarks are returned, and a maximum of 100000 bookmarks is supported via this API.
-- `&fromdt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or later
-- `&todt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or earlier
+- `&fromdt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or later.
+- `&todt={CCYY-MM-DDThh:mm:ssZ}` (optional) — Filter for posts on this date or earlier.
 - `&meta=yes` (optional) — Include change detection signatures on each item in a ‘meta’ attribute. Clients wishing to maintain a synchronized local store of bookmarks should retain the value of this attribute - its value will change when any significant field of the bookmark changes.
 
 ### Example
@@ -229,7 +230,7 @@ Returns a list of popular tags, recommended tags and network tags for a user. Th
 
 ### Arguments
 
-- `&url={URL}` (required) — URL for which you’d like suggestions
+- `&url={URL}` (required) — URL for which you’d like suggestions.
 
 ### Example
 

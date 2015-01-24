@@ -30,7 +30,7 @@ Assign a set of tags to a single bundle, wipes away previous settings for bundle
 
 ### Arguments
 
-- `&bundle={NAME}` (required) — Name of the bundle
+- `&bundle={NAME}` (required) — Name of the bundle.
 - `&tags={TAG}+{TAG}+...+{TAG}` (required) — List of tags, comma-separated.
 
 ### Example response
@@ -53,7 +53,7 @@ Delete a tag bundle.
 
 ### Arguments
 
-- `&bundle={NAME}` (required) — Name of the bundle
+- `&bundle={NAME}` (required) — Name of the bundle.
 
 ### Example response
 
